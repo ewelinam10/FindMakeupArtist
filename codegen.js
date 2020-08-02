@@ -1,9 +1,9 @@
 module.exports = {
     schema: [
         {
-            'https://hasura.io/learn/graphql': {
+            'http://localhost:8080/v1/graphql': {
                 headers: {
-                    Authorization: 'Bearer ' + process.env.AUTH_TOKEN,
+                    'content-type': 'application/json'
                 },
             },
         },
