@@ -13,6 +13,7 @@ import { HttpLink } from 'apollo-link-http';
 import { ApolloProvider, useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import UsersExampleList from './components/UserExample';
+import LandingPageContainer from './components/LandingPage/LandingPageContainer';
 
 const onRedirectCallback = (appState: any) => {
   history.push(
@@ -50,7 +51,7 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <UsersExampleList></UsersExampleList>
+    <LandingPageContainer></LandingPageContainer>
   </ApolloProvider>
 );
 
