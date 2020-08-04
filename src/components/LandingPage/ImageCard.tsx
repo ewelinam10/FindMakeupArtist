@@ -1,5 +1,6 @@
 import * as React from 'react';
 import ImageContainer, { ImageContainerProps } from './ImageContainer';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 export type ImageCard = {
     imageContainerProps: ImageContainerProps,
@@ -16,7 +17,9 @@ const ImageCard = (props: ImageCard) => {
                 <h2 className='titleCard'>{props.titleCard}</h2>
                 <ImageContainer images={props.imageContainerProps.images} />
                 <p className='descriptionCard'>{props.text}</p>
-                <a href={props.btnHref}>{props.btnTitle}</a>
+                <Link to={props.btnHref}>
+                    {props.btnTitle}
+                </Link>
             </div>
         </div>
     );

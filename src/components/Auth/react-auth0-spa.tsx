@@ -3,7 +3,7 @@ import createAuth0Client from "@auth0/auth0-spa-js";
 import Auth0Client from "@auth0/auth0-spa-js/dist/typings/Auth0Client";
 import Callback from './Callback';
 import Login from './Login';
-import App from '../App';
+import App from '../App2';
 
 interface Auth0Context {
   isAuthenticated: boolean;

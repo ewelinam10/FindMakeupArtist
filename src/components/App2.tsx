@@ -20,7 +20,7 @@ const createApolloClient = (authToken: string) => {
   });
 };
 
-const App = ({ idToken }: { idToken: string }) => {
+const App2 = ({ idToken }: { idToken: string }) => {
   const { loading, logout } = useAuth0();
   if (loading) {
     return (<div>Loading...</div>);
@@ -50,4 +50,4 @@ const App = ({ idToken }: { idToken: string }) => {
   );
 };
 
-export default App;
+export default App2;
