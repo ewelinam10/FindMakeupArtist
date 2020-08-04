@@ -1,8 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { Route, Router } from "react-router-dom";
-
-import './styles/App.css';
+import './styles/allStyles.scss';
 
 import { Auth0Provider } from "./components/Auth/react-auth0-spa";
 import history from "./utils/history";
