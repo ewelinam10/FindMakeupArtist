@@ -6,17 +6,18 @@ import React from "react";
 import LandingPageContainer from "./components/LandingPage/LandingPageContainer";
 import { Router, Route } from "react-router";
 import history from "./utils/history";
-import RegisterAuth0 from "./components/RegisterPage/RegisterAuth0";
+import MainPage from "./components/ProfilePage/MainPage";
 
 const client = new ApolloClient({
     cache: new InMemoryCache(),
+
     link: new HttpLink({
         uri: "http://localhost:8080/v1/graphql",
         headers: {
             'content-type': 'application/json'
         }
-
     }),
+    connectToDevTools: true
 });
 
 const App = () => {
@@ -25,7 +26,7 @@ const App = () => {
             <div>
                 <ApolloProvider client={client}>
                     <Route exact path='/' component={LandingPageContainer} />
-                    <Route path='/register' component={RegisterAuth0} />
+                    <Route path='/callback' component={MainPage} />
                 </ApolloProvider>
             </div>
         </Router>

@@ -1,5 +1,5 @@
 export const AUTH_CONFIG = {
-  domain: 'graphql-tutorials.auth0.com',
-  clientId: 'P38qnFo1lFAQJrzkun--wEzqljVNGcWW',
-  callbackUrl: 'http://localhost:3000'
+  domain: 'findmakeupartist.eu.auth0.com',
+  clientId: 'MwIqCMFuLIMxsjblEPZiC7FyWXHnxB46',
+  callbackUrl: 'http://localhost:3000/panel'
 };

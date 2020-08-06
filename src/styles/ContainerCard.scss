@@ -92,14 +92,21 @@
 	font-size: 0.9em;
 }
 
-.container .card .content a {
-	display: inline-block;
-	margin-top: 15px;
-	padding: 5px 10px;
-	background-color: rgba(138, 0, 156, 0.822);
-	color: #fff;
-	text-decoration: none;
+.container .card .content {
+	a,button {
+		display: inline-block;
+		margin-top: 15px;
+		padding: 5px 10px;
+		background-color: rgba(138, 0, 156, 0.822);
+		color: #fff;
+		text-decoration: none;
+		border: unset;
+	}
+	
 }
-.container .card:hover .content a {
-	background: #2196f3;
+.container .card:hover .content  {
+	a,button{
+		background: #2196f3;
+	}
+	
 }
