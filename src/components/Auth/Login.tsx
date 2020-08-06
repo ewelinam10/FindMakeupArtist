@@ -1,12 +1,11 @@
 import * as React from 'react';
-
-import { useAuth0 } from "./react-auth0-spa";
+import { useAuth0 } from "../Auth/react-auth0-spa";
 const Login = () => {
   const { loading, loginWithRedirect } = useAuth0();
-  if(loading) {
+  if (loading) {
     return (<div>Loading...</div>);
   }
-  return(
+  return (
     <div className="overlay">
       <div className="overlay-content">
         <div className="overlay-heading">
@@ -19,8 +18,8 @@ const Login = () => {
           <button
             id="qsLoginBtn"
             className="btn-margin loginBtn"
-            onClick={() => {loginWithRedirect({})}}
-           >
+            onClick={() => { loginWithRedirect({}) }}
+          >
             Log In
           </button>
         </div>

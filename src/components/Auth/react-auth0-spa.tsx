@@ -3,7 +3,8 @@ import createAuth0Client from "@auth0/auth0-spa-js";
 import Auth0Client from "@auth0/auth0-spa-js/dist/typings/Auth0Client";
 import Callback from './Callback';
 import Login from './Login';
-import App from '../App2';
+import App from '../../App'
+import LandingPageContainer from "../LandingPage/LandingPageContainer";
 
 interface Auth0Context {
   isAuthenticated: boolean;
@@ -119,7 +120,7 @@ export const Auth0Provider = ({
           logout: (o: LogoutOptions | undefined) => auth0Client!.logout(o)
         }}
       >
-        <Login />);
+        <App />);
       </Auth0Context.Provider>
     );
   }

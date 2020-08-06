@@ -1,19 +1,14 @@
 import * as ReactDOM from 'react-dom';
 import './styles/allStyles.scss';
-import { Auth0Provider } from "@auth0/auth0-react";
-import App from './App';
+import { Auth0Provider } from "./components/Auth/react-auth0-spa";
+
 import React from 'react';
+import { AUTH_CONFIG } from './components/Auth/auth0-variables';
 
 
 
-ReactDOM.render(
-    <Auth0Provider
-        domain="findmakeupartist.eu.auth0.com"
-        clientId="MwIqCMFuLIMxsjblEPZiC7FyWXHnxB46"
-        redirectUri={'http://localhost:3000/callback'}
-    >
-        <App />
-    </Auth0Provider>, document.getElementById("root"));
+ReactDOM.render(<Auth0Provider client_id={AUTH_CONFIG.clientId} domain={AUTH_CONFIG.domain} redirect_uri={AUTH_CONFIG.callbackUrl} />, document.getElementById("root"));
+
 
 
 

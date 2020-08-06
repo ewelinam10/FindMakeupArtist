@@ -7,6 +7,7 @@ import LandingPageContainer from "./components/LandingPage/LandingPageContainer"
 import { Router, Route } from "react-router";
 import history from "./utils/history";
 import MainPage from "./components/ProfilePage/MainPage";
+import { useAuth0 } from "./components/Auth/react-auth0-spa";
 
 const client = new ApolloClient({
     cache: new InMemoryCache(),
@@ -20,7 +21,15 @@ const client = new ApolloClient({
     connectToDevTools: true
 });
 
-const App = () => {
+interface appProps {
+    idToken?: string;
+}
+
+const App = (props: appProps) => {
+    const { loading, logout } = useAuth0();
+    if (loading) {
+        return (<div>Loading...</div>);
+    }
     return (
         <Router history={history}>
             <div>
