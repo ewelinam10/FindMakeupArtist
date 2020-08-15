@@ -12,15 +12,9 @@ export type ImageCard = {
     btnHref: string
 }
 
-// const LoginButton = () => {
-//     const { loginWithRedirect } = useAuth0();
-
-//     return <button onClick={() => loginWithRedirect()}>Zarejestruj się !</button>;
-// };
-
 
 const ImageCard = (props: ImageCard) => {
-    const isLoginBtn = props.btnHref == '/register' ? true : false;
+    const isLoginBtn = props.btnHref === '/register' ? true : false;
     return (
         <div className="card">
             <div className="content">
@@ -41,3 +35,4 @@ const ImageCard = (props: ImageCard) => {
 };
 
 export default ImageCard;
+

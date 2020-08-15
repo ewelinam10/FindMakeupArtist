@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as I from '../../utils/interfaces';
 
+
 export type ImageContainerProps = {
     images: I.Image[]
 }
@@ -8,7 +9,7 @@ export type ImageContainerProps = {
 const ImageContainer = ({ images }: ImageContainerProps) => {
     let imagesJQuery = [];
     for (const image of images) {
-        imagesJQuery.push(<img className={image.class} id={image.id}></img >);
+        imagesJQuery.push(<img className={image.class} id={image.id} src={image.src} ></img >);
     }
     return (
         <div className="image_container">
