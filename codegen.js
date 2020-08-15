@@ -3,7 +3,9 @@ module.exports = {
         {
             'http://localhost:8080/v1/graphql': {
                 headers: {
-                    'content-type': 'application/json'
+                    'content-type': 'application/json',
+                    'x-hasura-admin-secret': '4H7ZEVPrauU5olGW_Wwv6tz6rB4pfdLNINVasHCbtOgiSG2dLWz-Z2wLCOkhqVEd',
+                    'x-hasura-role' : 'user'
                 },
             },
         },

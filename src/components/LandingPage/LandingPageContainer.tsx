@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as I from '../../utils/interfaces';
 import ImageContainer, { ImageContainerProps } from './ImageContainer';
 import ImageCard from './ImageCard';
+import Logo from './Logo';
 
 
 
@@ -9,9 +10,12 @@ const LandingPageContainer = () => {
     const imageBusinessMakeupArtist: I.Image[] = [{ class: 'img', id: 'makeupartistBusinessImage' }];
     const imagesMakeupArtist: I.Image[] = getImages4Look4MakeupArtistCard();
     return (
-        <div className="container">
-            <ImageCard titleCard='Szukam makijażystki' imageContainerProps={{ images: imagesMakeupArtist }} text='Znajdź makijażystkę w swojej okolicy!' btnTitle='Szukaj' btnHref='/search' />
-            <ImageCard titleCard='Szukam klientki' imageContainerProps={{ images: imageBusinessMakeupArtist }} text='Dodaj swoje portfolio i pozwól znaleźć się tysiącom klientek!' btnTitle='Zarejestruj się!' btnHref='/register' />
+        <div>
+            <Logo />
+            <div className="container">
+                <ImageCard titleCard='Szukam makijażystki' imageContainerProps={{ images: imagesMakeupArtist }} text='Znajdź makijażystkę w swojej okolicy!' btnTitle='Szukaj' btnHref='/search' />
+                <ImageCard titleCard='Szukam klientki' imageContainerProps={{ images: imageBusinessMakeupArtist }} text='Dodaj swoje portfolio i pozwól znaleźć się tysiącom klientek!' btnTitle='Zarejestruj się!' btnHref='/register' />
+            </div>
         </div>
     );
 };

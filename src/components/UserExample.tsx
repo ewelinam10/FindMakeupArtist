@@ -12,10 +12,6 @@ query getUsers{
     id
     login
     created_at
-    photos {
-      id
-      photo
-    }
   }
 }`;
 

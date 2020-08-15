@@ -5,30 +5,27 @@
 #makeupartistBusinessImage {
 	content: url(../images/makeupartistbussines.png);
 }
+@mixin surroundImages($imageName, $left , $bottom) {
+	content: url('../images/' + $imageName + '.png');
+	left: $left;
+	bottom: $bottom;
+}
 
 #mirror {
-	content: url(../images/lusterko.png);
-	left: 50px;
-	bottom: 150px;
+	@include surroundImages('lusterko',50px,150px);
+}
+#fundation {
+	@include surroundImages('podklad',70px,260px);
 }
 
 #mascara {
-	content: url(../images/tusz.png);
-	left: 310px;
-	bottom: 210px;
+	@include surroundImages('tusz',310px,210px);
 }
+
 #perfum {
-	content: url(../images/perfumy.png);
-	left: 310px;
-	top: 200px;
+	@include surroundImages('perfumy',310px,265px);
 }
-#fundation {
-	content: url(../images/podklad.png);
-	left: 70px;
-	top: 200px;
-}
+
 #brush {
-	content: url(../images/pedzel2.png);
-	left: 310px;
-	bottom: 120px;
+	@include surroundImages('pedzel2',310px,120px);
 }

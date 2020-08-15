@@ -18,4 +18,13 @@ body {
 		url(../images/background.jpeg);
 	/*background-image: linear-gradient(rgb(255, 255, 255)40%, rgba(255, 255, 255, 0.363)), url(background.jpeg);*/
 }
+p.logo {
+	color: white;
+	background: url(../images/background2.jpg);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size:50px;
+	-webkit-text-stroke :purple;
+	-webkit-text-stroke-width: 1px;
+ }
 
