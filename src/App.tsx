@@ -48,9 +48,10 @@ const App = (props: appProps) => {
     const client: ApolloClient<any> = createApolloClient(props.idToken);
     return (
         <Router history={history}>
+            <Logo />
             <div>
-
                 <ApolloProvider client={client}>
+
                     <Route exact path='/' component={LandingPageContainer} />
                     <Route path='/callback' component={MainPage} />
                     <Route path='/search' component={MainPage} />

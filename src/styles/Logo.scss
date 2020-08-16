@@ -1,0 +1,21 @@
+p.logo {
+	color: rgba(131, 2, 125, 0.637);
+	font-size:30px;
+	white-space : pre-line;
+	text-align: justify;
+	background-size: 60%;
+	line-height: 20px;
+    padding:20px 0 0 20px ;
+    transition: all .2s ease-in-out;
+    
+ }
+ p.logo:hover{
+     color:  #00B4CC;
+     transform: scale(1.1);
+	 
+ }
+
+.logoContainer{
+	align-self: flex-start;
+	
+}

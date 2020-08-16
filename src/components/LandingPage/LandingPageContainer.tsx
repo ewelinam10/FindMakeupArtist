@@ -10,8 +10,7 @@ const LandingPageContainer = () => {
     const imageBusinessMakeupArtist: I.Image[] = [{ class: 'img', id: 'makeupartistBusinessImage' }];
     const imagesMakeupArtist: I.Image[] = getImages4Look4MakeupArtistCard();
     return (
-        <div>
-            <Logo />
+        <div className="landingPageContainer">
             <div className="container">
                 <ImageCard titleCard='Szukam makijażystki' imageContainerProps={{ images: imagesMakeupArtist }} text='Znajdź makijażystkę w swojej okolicy!' btnTitle='Szukaj' btnHref='/search' />
                 <ImageCard titleCard='Szukam klientki' imageContainerProps={{ images: imageBusinessMakeupArtist }} text='Dodaj swoje portfolio i pozwól znaleźć się tysiącom klientek!' btnTitle='Zarejestruj się!' btnHref='/register' />

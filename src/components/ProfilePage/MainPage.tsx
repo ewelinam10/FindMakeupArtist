@@ -7,6 +7,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { GetAllMakeupArtistsQuery, Users } from '../../generated/graphql';
 import ImageCard from '../LandingPage/ImageCard';
 import { User } from '@auth0/auth0-react/dist/auth-state';
+import SearchButton from '../Widgets/SearchButton';
 
 
 const GET_ALL_MAKEUPARTIST = gql`
@@ -19,6 +20,7 @@ query GetAllMakeupArtists {
     email
     first_name
     user_id
+    is_mobile_makeupArtist
     photos {
       id
       user_id
@@ -28,8 +30,21 @@ query GetAllMakeupArtists {
   }
 }
 `;
+function getPolishBoolean(boolValue: boolean | undefined | null): string {
+    if (boolValue) {
+        return 'Tak';
+    } else {
+        return 'Nie';
+    }
+}
 
+function getTextToImageCard(makeupartist: Users) {
+    let text = makeupartist.photos[0].title + `
+    Miasto : ` + makeupartist.adress + `
+    Mobilność : ` + getPolishBoolean(makeupartist.is_mobile_makeupArtist);
 
+    return text;
+}
 const MainPage = () => {
     const { loading, error, data } = useQuery<GetAllMakeupArtistsQuery>(GET_ALL_MAKEUPARTIST);
     const { user, isAuthenticated } = useAuth0();
@@ -41,12 +56,12 @@ const MainPage = () => {
     }
     const makeupartists: Users[] = data.users;
     const userPortfolios = makeupartists.map((makeupartist: Users) => (
-        <ImageCard btnTitle={'Umów się na makijaż'} titleCard={makeupartist.login || ''} btnHref='' text={makeupartist.photos[0].title || ''} imageContainerProps={{ images: [{ class: 'img', src: makeupartist.photos[0].photo }] }} />
+        <ImageCard btnTitle={'Zobacz więcej'} titleCard={makeupartist.login || ''} btnHref='' text={getTextToImageCard(makeupartist)} imageContainerProps={{ images: [{ class: 'img', src: makeupartist.photos[0].photo }] }} />
     ));
     if (isAuthenticated) {
         return (
             <div className="container">
-                <h1>Szukaj...</h1>
+                <SearchButton />
                 <div className="user_portfolios_wrapper">
                     {userPortfolios}
                 </div>
@@ -58,13 +73,15 @@ const MainPage = () => {
         )
     }
     return (
-        <div className="container">
-            <h1>Szukaj...</h1>
-            <br />
-            <div className="user_portfolios_wrapper">
+        <div>
+            <SearchButton />
+            <div className="container">
+
                 {userPortfolios}
+
             </div>
         </div>
+
 
 
     );

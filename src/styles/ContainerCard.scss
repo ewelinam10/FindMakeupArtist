@@ -72,7 +72,9 @@
 			padding: 0 20px;
 			transition: 0.5s;
 			display: flex;
+			align-items: center;
 			flex-direction: column;
+			width: 100%;
 			h2 {
 				font-size: 3em;
 			}
@@ -103,11 +105,14 @@
 		color: #fff;
 		text-decoration: none;
 		border: unset;
+		width: -webkit-fill-available;
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 }
 .container .card:hover .content {
 	a,
 	button {
-		background: #2196f3;
+		background:  #00B4CC;
 	}
 }
