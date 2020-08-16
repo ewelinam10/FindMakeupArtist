@@ -51,7 +51,6 @@ const App = (props: appProps) => {
             <Logo />
             <div>
                 <ApolloProvider client={client}>
-
                     <Route exact path='/' component={LandingPageContainer} />
                     <Route path='/callback' component={MainPage} />
                     <Route path='/search' component={MainPage} />

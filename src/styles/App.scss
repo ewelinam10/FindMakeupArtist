@@ -42,22 +42,4 @@ body::before{
     content: "";
     z-index: -1;
 }
-p.logo {
-	color: rgba(131, 2, 125, 0.637);
-	font-size:30px;
-	white-space : pre-line;
-	text-align: justify;
-
-	background-size: 60%;
-	line-height: 20px;
-	padding:20px 0 0 20px ;
- }
- p.logo:hover{
-	 color:  #00B4CC;	font-size:35px;
- }
-
-.background-image{
-	align-self: flex-start;
-	
-}
 

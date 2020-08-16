@@ -58,17 +58,15 @@ const MainPage = () => {
     const userPortfolios = makeupartists.map((makeupartist: Users) => (
         <ImageCard btnTitle={'Zobacz więcej'} titleCard={makeupartist.login || ''} btnHref='' text={getTextToImageCard(makeupartist)} imageContainerProps={{ images: [{ class: 'img', src: makeupartist.photos[0].photo }] }} />
     ));
-    if (isAuthenticated) {
+    // <LogoutButton />
+    if (true) {
         return (
-            <div className="container">
+            <div>
+                <ProfileAuth0 />
                 <SearchButton />
-                <div className="user_portfolios_wrapper">
+                <div className="container">
                     {userPortfolios}
                 </div>
-                <ProfileAuth0 />
-                <br />
-                <LogoutButton />
-
             </div>
         )
     }
@@ -76,9 +74,7 @@ const MainPage = () => {
         <div>
             <SearchButton />
             <div className="container">
-
                 {userPortfolios}
-
             </div>
         </div>
 

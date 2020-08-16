@@ -5,7 +5,7 @@ const Logo = () => {
 
     return (
         <div className='logoContainer'>
-            <p className='logo'>Znana<br />
+            <p className='logo stick'>Znana<br />
             Makijażystka</p>
         </div>
 
