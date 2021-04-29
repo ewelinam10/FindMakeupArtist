@@ -11,8 +11,6 @@ export type ImageCard = {
     btnTitle: string,
     btnHref: string
 }
-
-
 const ImageCard = (props: ImageCard) => {
     const isLoginBtn = props.btnHref === '/register' ? true : false;
     return (

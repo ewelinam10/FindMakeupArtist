@@ -2,6 +2,11 @@ import React, { Fragment } from "react";
 import NavBar from "../Widgets/NavBar";
 import { userInfo } from "os";
 import { useAuth0 } from "@auth0/auth0-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faUserEdit } from '@fortawesome/free-solid-svg-icons'
+import { faDoorClosed } from '@fortawesome/free-solid-svg-icons'
+
 
 const ProfileAuth0 = () => {
     const { user, isAuthenticated } = useAuth0();
@@ -10,9 +15,12 @@ const ProfileAuth0 = () => {
         <div className="navBar stick">
             <img src={picture} className="collapsible" />
             <div className="settingsList">
-                <p>Lorem ipsum...</p>
+                <ul>
+                    <li id='edit'> <FontAwesomeIcon icon={faUserEdit} /> <a href=''>Edytuj Portfolio </a></li>
+                    <li id='logout'><FontAwesomeIcon icon={faDoorClosed} /> <a href=''>Wyloguj </a> </li>
+                </ul>
             </div>
-        </div>
+        </div >
 
     );
 };

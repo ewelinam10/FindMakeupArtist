@@ -7,7 +7,7 @@ const Login = () => {
   }
   return (
     <React.Fragment>
-      <button id="qsLoginBtn" className="btn-margin loginBtn" onClick={() => { loginWithRedirect({}) }} >Log In </button>
+      <button id="qsLoginBtn" className="btn-margin loginBtn" onClick={() => { loginWithRedirect({}) }} >Zarejestruj się</button>
     </React.Fragment>
 
 

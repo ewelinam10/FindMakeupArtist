@@ -15,12 +15,12 @@ import Logo from "./components/LandingPage/Logo";
 const createApolloClient = (authToken?: string): ApolloClient<any> => {
     let headers: any = {}
     if (authToken) {
-        headers['Authorization'] = `Bearer ${authToken}`; //jesli to zadziala to powinnam nie podawac userid
+        headers['Authorization'] = `Bearer ${authToken}`;
     }
-    headers['x-hasura-admin-secret'] = '4H7ZEVPrauU5olGW_Wwv6tz6rB4pfdLNINVasHCbtOgiSG2dLWz-Z2wLCOkhqVEd';
-    headers['x-hasura-role'] = 'user';
-    //headers['x-hasura-user-id'] = 'EWELIN';
-    headers['content-type'] = 'application/json';
+    // headers['x-hasura-admin-secret'] = '4H7ZEVPrauU5olGW_Wwv6tz6rB4pfdLNINVasHCbtOgiSG2dLWz-Z2wLCOkhqVEd';
+    // headers['x-hasura-role'] = 'user';
+    // //headers['x-hasura-user-id'] = 'EWELIN';
+    // headers['content-type'] = 'application/json';
 
     return new ApolloClient({
         cache: new InMemoryCache(),
@@ -40,10 +40,6 @@ const App = (props: appProps) => {
     if (loading) {
         return (<div>Loading...</div>);
     }
-
-    const tekst = 'Na tym właśnie polega JSX'
-    const elementSX = <div>{tekst}</div>;
-
 
     const client: ApolloClient<any> = createApolloClient(props.idToken);
     return (

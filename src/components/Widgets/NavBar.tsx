@@ -5,7 +5,10 @@ const NavBar = () => {
         <div className="navBar">
             <button type="button" className="collapsible">Open Collapsible</button>
             <div className="settingsList">
-                <p>Lorem ipsum...</p>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                </ul>
             </div>
         </div>
     );

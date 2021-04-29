@@ -1,5 +1,5 @@
-p.logo {
-	color: rgba(131, 2, 125, 0.637);
+.logo {
+	color: $base-color;
 	font-size:30px;
 	white-space : pre-line;
 	text-align: justify;
@@ -9,9 +9,10 @@ p.logo {
     transition: all .2s ease-in-out;
     
  }
- p.logo:hover{
-     color:  #00B4CC;
-     transform: scale(1.1);
+ .logo:hover{
+     color: $base-color2;
+	 transform: scale(1.1);
+	 cursor: pointer;
 	 
  }
 
