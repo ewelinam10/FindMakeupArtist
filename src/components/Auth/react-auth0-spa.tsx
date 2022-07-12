@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
-import createAuth0Client from "@auth0/auth0-spa-js";
+import createAuth0Client, { Auth0ClientOptions, getIdTokenClaimsOptions, GetTokenSilentlyOptions, GetTokenWithPopupOptions, IdToken, LogoutOptions, PopupLoginOptions, RedirectLoginOptions, RedirectLoginResult } from "@auth0/auth0-spa-js";
 import Auth0Client from "@auth0/auth0-spa-js/dist/typings/Auth0Client";
 import Callback from './Callback';
-import Login from './Login';
 import App from '../../App'
-import LandingPageContainer from "../LandingPage/LandingPageContainer";
 
 interface Auth0Context {
   isAuthenticated: boolean;

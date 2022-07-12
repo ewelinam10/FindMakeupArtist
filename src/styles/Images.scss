@@ -5,6 +5,10 @@
 #makeupartistBusinessImage {
 	content: url(../images/makeupartistbussines.png);
 }
+
+#exampleImage {
+	content: url(../images/em_portret.jpg);
+}
 @mixin surroundImages($imageName, $left , $bottom) {
 	content: url('../images/' + $imageName + '.png');
 	left: $left;
