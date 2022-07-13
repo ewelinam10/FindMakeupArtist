@@ -2,3 +2,4 @@
  
  <img src="/gitAssets/pageAnimation.gif" width=100% height="auto" /> </a>
 
+Unavailable to run without hasura on docker server
